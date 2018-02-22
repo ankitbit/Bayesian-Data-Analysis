@@ -1,0 +1,96 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+The dice problem-
+```{r dice_problem_simulation}
+plot(1:6, rep(1/6, 6), ty= "h", xlab=" x ", ylab = "p(x)", main = "Dice Problem")
+
+```
+
+`dpois` gives the probability of a given value which is ditributed as poisson
+```{R}
+plot(0:10, dpois(0:10, 2), xlab = "y", ylab = "p(y)", main = "Poisson simulation", ty="h" )
+```
+```{R}
+plot( function(x) dnorm(x, 0, 1), xlim= c(-5,5), ylab = "f(x)",
+      col="steelblue", lwd=3)
+plot( function(x) dnorm(x, 0, 2), xlim= c(-5,5), ylab = "f(x)", add= TRUE,
+      lty=2, col= "tomato", lwd=3)
+legend("topright", c("Normal(0,1)", "Normal(0,2)"), lty = c(1,2), col = c("steelblue", "tomato") )
+```
+
+Now, let us begin to learn how to compute the probabilities using R. So, consider that X follows Normal(5,3) and we wish to compute the probability that P(6 < X < 9)
+
+```{R}
+pnorm(9,5,3) - pnorm(6,5,3)
+
+N <- 10000
+x <- rnorm(N, 5,3)
+sum(x>6 & x<9)/N
+
+sum(random_vector >6 & random_vector <9)/100000
+
+
+
+random_vector <- rnorm(100000, 5,3)
+prob <- function(random_vector){
+  ratio  <- numeric(0)
+  sum_nr <- numeric(100000)
+  sum_dr <- numeric(100000)
+  for(i in 1:length(random_vector)){
+    
+  }
+  
+}
+
+
+hist(x)
+plot(density(x))
+
+```
+Y = number of smokers in a sample size of n
+Y follows a binomial with parameters n and p. 
+Clealry, we know something about the prior distribution, that is, we assume that percentage of smokers follows binomial probability distribution. 
+Our x-axis will go from 0 to 100 percent. If one believes that smoking rate is between 20 and 40, and
+This is just an attempt to describe that some rankings are more likely than other rankings. This is the idea of likelihood. The likelhood function ranks the values from being more likely to less likely. 
+```{R Monty_Hall}
+
+## MONTY HALL PROBLEM
+
+door <- 1:3
+
+n.sim <- 100000
+Car <- sample(door, n.sim, rep=T)
+Chose <- sample(door, n.sim, rep=T)
+
+Open <- rep(NA,n.sim)
+ChangeWin <- rep(NA, n.sim)
+
+for (i in 1:n.sim) {
+ if (Car[i] != Chose[i]) Open[i] <- door[-c(Car[i],Chose[i])]
+ if (Car[i] == Chose[i]) Open[i] <- sample(door[-c(Car[i])],1)
+}
+
+for (i in 1:n.sim) {
+ if (Car[i] != Chose [i]) ChangeWin[i] <- 1
+ if (Car[i] == Chose [i]) ChangeWin[i] <- 0
+}
+
+
+cbind(Car,Chose ,Open,ChangeWin)[1:10,]
+
+
+
+
+cat("\n",
+    " win probability after changing:      ", round(sum(ChangeWin)/n.sim,3), "\n",
+    " win probability without changeing:   ", round((n.sim-sum(ChangeWin))/n.sim,3), "\n")
+
+
+```
+
+
+
+
