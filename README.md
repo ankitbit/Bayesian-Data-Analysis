@@ -2,3 +2,7 @@
 
 * [Doing Bayesian Data Analysis](http://www.users.csbsju.edu/~mgass/robert.pdf)
 * [Maximum Likelihood Estimation](http://www.ms.uky.edu/~mai/sta321/MLEexample.pdf)
+
+
+# References-
+- [STAT 470 NCSU](https://www4.stat.ncsu.edu/~reich/ST740/)
