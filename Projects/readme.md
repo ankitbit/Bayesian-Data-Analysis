@@ -2,3 +2,7 @@ This repository consists of a series of tutorials given on Bayesian Data Analysi
 
 * [Modelling Earthquake Waiting Times](http://rpubs.com/army_aviator/370794)
 * [Predicting Time to Failure of Electric Bulbs](http://rpubs.com/army_aviator/370894/)
+
+
+## External 
+- [Bayesian Modelling for Movies](https://rpubs.com/Khaltar/336217)
