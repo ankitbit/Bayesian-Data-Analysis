@@ -6,3 +6,4 @@
 
 # References-
 - [STAT 470 NCSU](https://www4.stat.ncsu.edu/~reich/ST740/)
+- [STAT 790](https://www4.stat.ncsu.edu/~ghosh/TEACHING/st790abi/) - 
