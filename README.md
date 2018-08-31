@@ -10,3 +10,5 @@
 - [Bayesian Methods for Machine Learning](https://mingyuanzhou.github.io/STA380/)
 
 - [Bayesian Data Analysis](http://knuthlab.rit.albany.edu/courses/2015/BayesianDataAnalysis/): Lectures by Kevin Knuth, 
+
+- [Bayesian Reasoning and Machine Learning](http://web4.cs.ucl.ac.uk/staff/D.Barber/textbook/091117.pdf)
